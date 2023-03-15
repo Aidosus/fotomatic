@@ -132,8 +132,8 @@ header .mobile {
 
 #sign-up-section {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   height: 43.5rem;
   width: 100%;
   background-image: url(../images/banner-landingpage.jpg);
@@ -148,12 +148,11 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20a;
-  margin: 10.625rem 6.25rem 0 10.625rem;
-
+  width: 35em;
 }
 
 #sign-up-cta .content {
-  width: 26.625rem;
+  /* width: 26.625rem; */
   margin-top: 2rem;
   font-family: 'Kanit', sans-serif;
   font-size: 1.25rem;
@@ -191,10 +190,10 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #sign-up-section {
-
     align-items: center;
     justify-content: center;
     height: 28rem;
+    width: 100%;
   }
 
   #sign-up-cta {
@@ -204,6 +203,7 @@ header .mobile {
     background-color: transparent;
     border: none;
     margin: 0;
+    max-width: 100%;
   }
 
   #sign-up-cta .content {
@@ -227,7 +227,6 @@ header .mobile {
   #sign-up-section {
     height: 20rem;
   }
-
   #sign-up-cta h1 {
     font-size: 2.25rem;
   }
@@ -240,6 +239,7 @@ header .mobile {
 /* Features Section */
 
 #features-section {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
   padding: 2rem 0.5vw;
@@ -351,7 +351,9 @@ font-weight: 300;
   }
 }
 @media only screen and (max-width: 450px) {
-
+  #features-section .feature{
+    max-width: 100vw;
+  }
 }
 
 /* Quotes Section */
@@ -383,19 +385,33 @@ font-weight: 300;
   #quotes-section content {
     padding: 1.875rem .625rem;
   }
-
+  
   #quotes-section .quote {
     font-size: 2rem;
     line-height: 1.4;
     display: inline-block;
     text-align: left;
   }
-
+  
   #quotes-section .quote-citation {
     display: inline-block;
     padding-top: 1rem;
     margin: auto;
     margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #quotes-section .quote {
+    text-align: center;
+  }
+  #quotes-section .content {
+    flex-direction: column;
+  }
+  #quotes-section .quote-citation {
+    margin-right: auto;
+  }
+  @media .feature and () {
+    
   }
 }
 
